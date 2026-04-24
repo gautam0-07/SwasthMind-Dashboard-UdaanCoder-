@@ -271,7 +271,15 @@
     setTimeout(() => {
       const bot = document.createElement("div");
       bot.className = "bg-white p-3 rounded-xl shadow w-fit";
-      bot.innerText = "I'm here for you 💙";
+      const replies = [
+        "I hear you. Want to talk more about it?",
+        "That sounds tough. You're doing your best 🌿",
+        "Try taking a deep breath 🧘",
+        "I'm here for you. Want a small suggestion?",
+	      "Everything's going to be alright"
+      ];
+
+      bot.innerText = replies[Math.floor(Math.random() * replies.length)];
       chat.appendChild(bot);
       chat.scrollTop = chat.scrollHeight;
     }, 500);
